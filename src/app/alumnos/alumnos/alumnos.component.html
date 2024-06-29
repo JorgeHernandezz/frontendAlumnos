@@ -1,0 +1,39 @@
+<div class="grid">
+    <div class="col-12">
+      <div class="card">
+        <h1>{{ titulo }}</h1>
+        <div *ngIf="losAlumnos.length > 0; else noAlumnos">
+          <p-table 
+            [value]="losAlumnos" 
+            [paginator]="true" 
+            [rows]="5" 
+            [rowsPerPageOptions]="[5,10,20]" 
+            styleClass="p-datatable-gridlines blue-borders"
+            [tableStyle]="{ 'min-width': '50rem' }">
+            <ng-template pTemplate="header">
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Paterno</th>
+                <th>Materno</th>
+                <th>Email</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-alumno>
+              <tr>
+                <td>{{ alumno.idusuario }}</td>
+                <td>{{ alumno.nombre }}</td>
+                <td>{{ alumno.paterno }}</td>
+                <td>{{ alumno.materno }}</td>
+                <td>{{ alumno.email }}</td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+        <ng-template #noAlumnos>
+          <div class="card">No hay alumnos para mostrar.</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  

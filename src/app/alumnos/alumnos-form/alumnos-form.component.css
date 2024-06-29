@@ -1,0 +1,24 @@
+.message {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .success {
+    background-color: #aee4bb; /* Color verde */
+    color: #1eb541; /* Color del texto para verde */
+  }
+  
+  .error {
+    background-color: #f8d7da; 
+    color: #bc0c1d; 
+  }
+  
+  .button-group {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  

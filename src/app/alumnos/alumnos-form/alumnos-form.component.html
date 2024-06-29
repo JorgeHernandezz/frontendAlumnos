@@ -1,0 +1,56 @@
+<div class="col-10">
+    <div class="card">
+      <div class="grid">
+        <div class="col-10 md:col-10">
+          <div class="card p-fluid">
+            <h1>Datos del Alumno</h1>
+            <div class="field">
+                
+                <label htmlFor="id">
+                    <i class="pi pi-id-card" style="margin-right: 5px;"></i>
+                    Id
+                  </label>
+                  
+              <input pInputText type="text" [(ngModel)]="alumno.idusuario" pattern="[0-9]+" />
+            </div>
+            <button pButton type="button" icon="pi pi-sync" class="p-button-success" label="Cargar datos con base en el ID" (click)="cargarDatos()"></button>
+            <p></p>
+            <button pButton type="button" icon="pi pi-user-edit" label="Actualizar datos del alumno con base en el ID" (click)="actualizarAlumno()"></button>
+            <p></p>
+            <button pButton type="button" icon="pi pi-times" class="p-button-danger" label="Eliminar alumno con base en el ID" (click)="eliminarAlumno()"></button>
+            <p></p>
+            <div class="field">
+              <label htmlFor="nombre">Nombre</label>
+              <input pInputText type="text" [(ngModel)]="alumno.nombre" required />
+            </div>
+            <div class="field">
+              <label htmlFor="paterno">Paterno</label>
+              <input pInputText type="text" [(ngModel)]="alumno.paterno" required />
+            </div>
+            <div class="field">
+              <label htmlFor="materno">Materno</label>
+              <input pInputText type="text" [(ngModel)]="alumno.materno" required />
+            </div>
+            <div class="field">
+                <label htmlFor="Email">
+                    <i class="pi pi-at" style="margin-right: 5px;"></i>
+                    Email
+                  </label>
+              <input pInputText type="email" [(ngModel)]="alumno.email" required />
+            </div>
+            <!-- Mensajes de éxito y error -->
+            <div *ngIf="mensajeExito" class="message success">
+              {{ mensajeExito }}
+            </div>
+            <p></p>
+            <div *ngIf="mensajeError" class="message error">
+              {{ mensajeError }}
+            </div>
+            <p></p>
+            <button pButton icon="pi pi-plus" type="button" label="Agregar alumno (esperar 10 segundos despues de dar click para ver los cambios)" (click)="agregarAlumno()"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
