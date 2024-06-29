@@ -10,7 +10,7 @@ import { Alumno } from '../model/Alumno';
 })
 export class AlumnoService {
 
-  private apiUrl = 'http://localhost:8080/apiUsuario/usuarios';
+  private apiUrl = 'https://backendalumnosspringboot-jorgehdz.onrender.com/apiUsuario/usuarios';
 
   constructor(private http: HttpClient) { }
 

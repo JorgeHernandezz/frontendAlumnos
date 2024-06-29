@@ -21,7 +21,7 @@ export class AlumnosFormComponent {
     materno: '',
     email: ''
   };
-  apiUrl = 'http://localhost:8080/apiUsuario/usuarios';
+  apiUrl = 'https://backendalumnosspringboot-jorgehdz.onrender.com/apiUsuario/usuarios';
   mensajeExito: string = '';
   mensajeError: string = '';
 
